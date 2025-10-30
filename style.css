@@ -1,0 +1,111 @@
+body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgb(57, 54, 137);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    padding: 30px;
+    max-width: 1100px;
+    width: 90%;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f8fafc;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #c1d2ea;
+    margin-bottom: 25px;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover { transform: scale(1.05); background-color: #2563eb; }
+.btn.purple { background-color: #8b5cf6; }
+.btn.purple:hover { background-color: #7c3aed; }
+.btn.yellow { background-color: #facc15; color: #000; }
+.btn.yellow:hover { background-color: #eab308; }
+.btn.red { background-color: #ef4444; }
+.btn.red:hover { background-color: #dc2626; }
+
+.time-display {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+    color: #facc15;
+}
+
+.maze-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    width: 1000px;
+    height: 500px;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(25, 1fr);
+    border: 2px solid #ccc;
+}
+
+.grid-cell {
+
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.wall { background-color: #3b82f6; }
+.path { background-color: #f7f8fa; }
+.start { background-color: #10b981; color: #fff; font-weight: bold; }
+.end { background-color: #ef4444; color: #fff; font-weight: bold; }
+.visited { background-color: #9ab9e5; }
+.shortest-path { background-color: #facc15; color: #696262; }
+
+.visited-animation { animation: visited-pulse 0.4s ease-out; }
+.path-animation { animation: path-pulse 0.4s ease-out; }
+
+@keyframes visited-pulse {
+    0% { transform: scale(0.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes path-pulse {
+    0% { transform: scale(0.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}

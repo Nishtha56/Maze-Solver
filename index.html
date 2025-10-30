@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Maze Solver Visualizer</h1>
+        <p class="subtitle">Click and drag to add walls. Click on an empty cell to set the Start (S) and End (E) points.</p>
+
+        <div class="btn-group">
+            <button id="bfs-btn" class="btn">BFS</button>
+            <button id="dfs-btn" class="btn">DFS</button>
+            <button id="dijkstra-btn" class="btn">Dijkstra's</button>
+            <button id="random-maze-btn" class="btn purple">Random Maze</button>
+            <button id="clear-path-btn" class="btn yellow">Clear Path</button>
+            <button id="clear-walls-btn" class="btn red">Clear Walls</button>
+        </div>
+
+        <div id="time-display" class="time-display"></div>
+
+        <div class="maze-wrap">
+            <div id="maze-grid" class="grid-container">
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
