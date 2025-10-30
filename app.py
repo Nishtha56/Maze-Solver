@@ -135,6 +135,10 @@ def solve():
         'path': path,
         'time_taken': time_taken 
     })
-
+@app.after_request
+def inject_vercel_analytics(response):
+    if response.content_type.startswith('text/html'):
+        response.data = response.data.replace(b'<!-- VERCEL_ANALYTICS -->', b"<script>window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };</script><script defer src='/_vercel/insights/script.js'></script>")
+    return response
 if __name__ == '__main__':
     app.run(debug=True)
