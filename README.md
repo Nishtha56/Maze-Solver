@@ -34,7 +34,3 @@ This project helps visualize the working, efficiency, and execution time of each
 | DFS | Slower for deep mazes | Fewer but may repeat |
 | Dijkstra | Slower due to cost calculation | Highest |
 
-
-
-### 🔹 BFS
-
