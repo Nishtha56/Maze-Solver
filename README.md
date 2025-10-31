@@ -6,6 +6,8 @@ The **Maze Solver** project is an interactive application that demonstrates how 
 This project helps visualize the working, efficiency, and execution time of each algorithm, providing a clear comparison of their strengths and limitations.
 
 ---
+## You can try It!!
+- https://path-finder-three-phi.vercel.app/
 
 ## 🎯 Objectives
 - To implement and compare BFS, DFS, and Dijkstra algorithms for maze solving.  
